@@ -60,7 +60,7 @@
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rDa-Kt-BOY">
                                                 <rect key="frame" x="0.0" y="38" width="160" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -114,6 +114,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="LCb-30-gDN"/>
                     <connections>
+                        <outlet property="passwordField" destination="rDa-Kt-BOY" id="GlG-td-1Ou"/>
+                        <outlet property="usernameField" destination="7Pl-DV-WKY" id="mGC-jc-hnM"/>
                         <segue destination="7AB-xA-573" kind="show" identifier="loginSuccessSegue" id="JlZ-y7-Uph"/>
                     </connections>
                 </viewController>
@@ -146,7 +148,7 @@
                         <viewControllerLayoutGuide type="bottom" id="hwF-gl-ovy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IEP-0l-0ua">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -271,12 +273,16 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="Vgl-Rt-GzS">
                             <connections>
-                                <segue destination="NW2-NR-Qn1" kind="unwind" unwindAction="saveToHomeTab:" id="Ltq-iQ-vVM"/>
+                                <action selector="saveConflict:" destination="jjo-dZ-nIv" id="6gH-f9-i1k"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="descriptionTextView" destination="Jk7-ex-NHs" id="WmP-Ll-hxL"/>
+                        <outlet property="defenderField" destination="MKi-eh-EWF" id="3FO-2i-qB6"/>
+                        <outlet property="descriptionTextView" destination="Jk7-ex-NHs" id="poV-aJ-vQm"/>
+                        <outlet property="prosecutorField" destination="rpN-Dp-kmu" id="xA4-Zx-eok"/>
+                        <segue destination="NW2-NR-Qn1" kind="unwind" identifier="saveConflict" unwindAction="saveToHomeTab:" id="t5M-Fr-sE5"/>
+                        <segue destination="7AB-xA-573" kind="show" id="06i-s3-GSI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94c-aX-eMt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -330,4 +336,7 @@
             <point key="canvasLocation" x="643" y="370"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="06i-s3-GSI"/>
+    </inferredMetricsTieBreakers>
 </document>
