@@ -19,6 +19,7 @@ if ($username === ''
     || $username === NULL
     || $password === NULL) {
     print(-1);  // fail if data is blank
+    exit();
 }
 
 $db = new DB();
