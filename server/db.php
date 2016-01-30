@@ -10,7 +10,6 @@ class DB {
     // creates the mysqli database connection
     public function __construct()
     {
-        print("constructing...\n");
         $this->mysqli = new mysqli($this->hostname,
             $this->username,
             $this->password,
