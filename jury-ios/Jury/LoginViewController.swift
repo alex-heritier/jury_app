@@ -28,21 +28,25 @@ class LoginViewController: UIViewController {
         
         //used code from this url:
         //http://stackoverflow.com/questions/26364914/http-request-in-swift-with-post-method
-        let request = NSMutableURLRequest(URL: NSURL(string: "http://www.aheritier.com/jury/server/login.php" + "?username=" + usernameField.text! + "&password=" + passwordField.text!)!)
+        
+        let originalUrl = "http://www.aheritier.com/jury/server/login.php?username=" + usernameField.text! + "&password=" + passwordField.text!
+        let urlString = originalUrl.stringByRemovingPercentEncoding
+        
+        let request = NSMutableURLRequest(URL: NSURL(string: urlString!)!)
         request.HTTPMethod = "GET"
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {data, response, error in
             guard error == nil && data != nil else {
-                print("error=\(error)")
+                print("error=\(error!)")
                 return
             }
             
             if let httpStatus = response as? NSHTTPURLResponse where httpStatus.statusCode != 200 {
                 print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                print("response = \(response)")
+                print("response = \(response!)")
             }
             
             let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            print(responseString)
+            print(responseString!)
             
             if let responseInt = Int(responseString! as String) {
                 if responseInt > 0 {

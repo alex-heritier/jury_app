@@ -28,7 +28,7 @@ class NewConflictViewController: UIViewController {
     }
 
     @IBAction func saveConflict(sender: UIBarButtonItem) {
-        var urlString1 = "http://www.aheritier.com/jury/server/login.php?prosecutor=\(prosecutorField.text!)"
+        var urlString1 = "http://www.aheritier.com/jury/server/create_case.php?prosecutor=\(prosecutorField.text!)"
         urlString1 += "&defender=\(defenderField.text!)&description=\(descriptionTextView.text!)"
         urlString1 += "&user_id=\(myAppDelegate.appModel.userID)"
         
@@ -37,21 +37,21 @@ class NewConflictViewController: UIViewController {
         request.HTTPMethod = "GET"
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {data, response, error in
             guard error == nil && data != nil else {
-                print("error=\(error)")
+                print("error=\(error!)")
                 return
             }
             
             if let httpStatus = response as? NSHTTPURLResponse where httpStatus.statusCode != 200 {
                 print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                print("response = \(response)")
+                print("response = \(response!)")
             }
             
             let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            print(responseString)
+            print(responseString!)
         }
         task.resume()
         
-        performSegueWithIdentifier("saveToHomeTab", sender: self)
+        performSegueWithIdentifier("submitConflictSegue", sender: self)
     }
         override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
