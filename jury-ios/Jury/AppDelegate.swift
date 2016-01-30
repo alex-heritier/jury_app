@@ -13,8 +13,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var appModel = AppModel()
+    var networkingController: NetworkingController!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        networkingController = NetworkingController(appdelegate: self as AppDelegate)
         
         // Override point for customization after application launch.
         return true

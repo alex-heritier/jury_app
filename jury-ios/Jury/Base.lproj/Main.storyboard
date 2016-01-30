@@ -10,7 +10,6 @@
         <!--Navigation Controller-->
         <scene sceneID="q6X-IP-aZy">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pcj-ux-10u" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="X8C-7K-UnW" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9ek-We-yma">
@@ -21,6 +20,7 @@
                         <segue destination="Ser-ST-EdR" kind="relationship" relationship="rootViewController" id="G1r-YN-1qs"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pcj-ux-10u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-571" y="370"/>
         </scene>
@@ -191,7 +191,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tDa-9V-Ank" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="244" y="-299"/>
+            <point key="canvasLocation" x="244" y="-307"/>
         </scene>
         <!--New Conflict-->
         <scene sceneID="Tz8-8P-jJS">
@@ -282,13 +282,12 @@
                         <outlet property="descriptionTextView" destination="Jk7-ex-NHs" id="poV-aJ-vQm"/>
                         <outlet property="prosecutorField" destination="rpN-Dp-kmu" id="xA4-Zx-eok"/>
                         <segue destination="NW2-NR-Qn1" kind="unwind" identifier="saveConflict" unwindAction="saveToHomeTab:" id="t5M-Fr-sE5"/>
-                        <segue destination="7AB-xA-573" kind="show" identifier="submitConflictSegue" id="06i-s3-GSI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94c-aX-eMt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="NW2-NR-Qn1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="643" y="-299"/>
+            <point key="canvasLocation" x="643" y="-307"/>
         </scene>
         <!--Home-->
         <scene sceneID="QHR-tv-l51">
@@ -336,7 +335,4 @@
             <point key="canvasLocation" x="643" y="370"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="JlZ-y7-Uph"/>
-    </inferredMetricsTieBreakers>
 </document>

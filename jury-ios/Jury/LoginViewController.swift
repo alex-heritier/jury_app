@@ -25,48 +25,17 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func submit(sender: UIButton) {
+        myAppDelegate.networkingController.sendLoginCredentials(usernameField.text!, passwordText: passwordField.text!)
         
-        //used code from this url:
-        //http://stackoverflow.com/questions/26364914/http-request-in-swift-with-post-method
-        
-        let originalUrl = "http://www.aheritier.com/jury/server/login.php?username=" + usernameField.text! + "&password=" + passwordField.text!
-        let urlString = originalUrl.stringByRemovingPercentEncoding
-        
-        let request = NSMutableURLRequest(URL: NSURL(string: urlString!)!)
-        request.HTTPMethod = "GET"
-        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {data, response, error in
-            guard error == nil && data != nil else {
-                print("error=\(error!)")
-                return
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            while !self.myAppDelegate.appModel.canLogin {
+                NSThread.sleepForTimeInterval(0.1)
             }
-            
-            if let httpStatus = response as? NSHTTPURLResponse where httpStatus.statusCode != 200 {
-                print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                print("response = \(response!)")
-            }
-            
-            let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            print(responseString!)
-            
-            if let responseInt = Int(responseString! as String) {
-                if responseInt > 0 {
-                    self.myAppDelegate.appModel.userID = responseInt
-                    self.myAppDelegate.appModel.username = self.usernameField.text
-                    
-                    dispatch_async(dispatch_get_main_queue(),{
-                        self.performSegueWithIdentifier("loginSuccessSegue", sender: self)
-                    })
-                }
-                else {
-                    print("Wrong Password")
-                }
-            }
+            dispatch_async(dispatch_get_main_queue(),{
+                self.performSegueWithIdentifier("loginSuccessSegue", sender: self)
+            })
         }
-        task.resume()
-    }
-    
-    func lel(){
-        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
