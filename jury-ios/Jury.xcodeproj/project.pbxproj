@@ -24,6 +24,7 @@
 		02AF45131C5DFE9500A8D8E8 /* logo35.png in Resources */ = {isa = PBXBuildFile; fileRef = 02AF45121C5DFE9500A8D8E8 /* logo35.png */; };
 		02AF45171C5E01B600A8D8E8 /* scales35.png in Resources */ = {isa = PBXBuildFile; fileRef = 02AF45161C5E01B600A8D8E8 /* scales35.png */; };
 		02AF45191C5E060800A8D8E8 /* romanhouse35.png in Resources */ = {isa = PBXBuildFile; fileRef = 02AF45181C5E060800A8D8E8 /* romanhouse35.png */; };
+		0B039E7D1C5E93E2006174D6 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B039E7C1C5E93E2006174D6 /* HomeTabBarController.swift */; };
 		0B15E07D1C5DF71B008EA803 /* YourConflictsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B15E07C1C5DF71B008EA803 /* YourConflictsViewController.swift */; };
 		0B15E07F1C5DF991008EA803 /* ConflictCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B15E07E1C5DF991008EA803 /* ConflictCallback.swift */; };
 		0B15E0811C5E0329008EA803 /* ConflictTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B15E0801C5E0329008EA803 /* ConflictTableViewCell.swift */; };
@@ -66,6 +67,7 @@
 		02AF45121C5DFE9500A8D8E8 /* logo35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo35.png; sourceTree = "<group>"; };
 		02AF45161C5E01B600A8D8E8 /* scales35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scales35.png; sourceTree = "<group>"; };
 		02AF45181C5E060800A8D8E8 /* romanhouse35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = romanhouse35.png; sourceTree = "<group>"; };
+		0B039E7C1C5E93E2006174D6 /* HomeTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		0B15E07C1C5DF71B008EA803 /* YourConflictsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourConflictsViewController.swift; sourceTree = "<group>"; };
 		0B15E07E1C5DF991008EA803 /* ConflictCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConflictCallback.swift; sourceTree = "<group>"; };
 		0B15E0801C5E0329008EA803 /* ConflictTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConflictTableViewCell.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				0BB2A5A11C5C6AB3003579E5 /* NetworkingController.swift */,
 				0BB2A5971C5C45A9003579E5 /* LoginViewController.swift */,
 				0BA642F61C5DD0A000B854E5 /* LoginNavigationController.swift */,
+				0B039E7C1C5E93E2006174D6 /* HomeTabBarController.swift */,
 				0BB2A59B1C5C5152003579E5 /* NewConflictViewController.swift */,
 				0B34B7261C5D525700C5D0B9 /* YourJuriesViewController.swift */,
 				0B15E07C1C5DF71B008EA803 /* YourConflictsViewController.swift */,
@@ -291,6 +294,7 @@
 				0B15E0871C5E1196008EA803 /* ConflictDetailCallback.swift in Sources */,
 				0B15E07D1C5DF71B008EA803 /* YourConflictsViewController.swift in Sources */,
 				0B34B72B1C5D7A2200C5D0B9 /* CaseTableViewCell.swift in Sources */,
+				0B039E7D1C5E93E2006174D6 /* HomeTabBarController.swift in Sources */,
 				0BB2A59A1C5C4F77003579E5 /* HomeViewController.swift in Sources */,
 				0B15E0811C5E0329008EA803 /* ConflictTableViewCell.swift in Sources */,
 				0B34B7291C5D62F700C5D0B9 /* JurorCallback.swift in Sources */,

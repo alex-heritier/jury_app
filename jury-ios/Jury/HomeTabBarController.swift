@@ -1,14 +1,14 @@
 //
-//  LoginNavigationController.swift
+//  HomeTabBarController.swift
 //  Jury
 //
-//  Created by Keegan Papakipos on 1/30/16.
+//  Created by Keegan Papakipos on 1/31/16.
 //  Copyright © 2016 kpapakipos. All rights reserved.
 //
 
 import UIKit
 
-class LoginNavigationController: UINavigationController {
+class HomeTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,6 @@ class LoginNavigationController: UINavigationController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation
