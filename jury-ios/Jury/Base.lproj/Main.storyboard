@@ -631,7 +631,7 @@
         <scene sceneID="4F2-O8-sLf">
             <objects>
                 <tabBarController id="oPv-yK-ZsY" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="X2O-9G-2Rm">
+                    <navigationItem key="navigationItem" title="Jury" id="X2O-9G-2Rm">
                         <barButtonItem key="leftBarButtonItem" id="4Pu-1T-4ht">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ksf-IV-6jw">
                                 <rect key="frame" x="16" y="7" width="71" height="30"/>
@@ -642,7 +642,6 @@
                                 </connections>
                             </button>
                         </barButtonItem>
-                    <navigationItem key="navigationItem" title="Jury" id="X2O-9G-2Rm">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="SH5-ae-Mkx">
                             <connections>
                                 <segue destination="qlr-K1-MHC" kind="presentation" id="D78-gW-lN3"/>
