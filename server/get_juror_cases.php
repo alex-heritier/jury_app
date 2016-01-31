@@ -2,6 +2,7 @@
 
 require 'db.php';
 
+
 $user_id = $_GET['user_id'];
 //$user_id = 80;
 
@@ -22,11 +23,13 @@ while ($row = $case_id_result->fetch_array(MYSQLI_ASSOC)) {
     $get_case_data_query .= "id='$case_id' OR ";
 }
 //print_r($vote_ids);
+
 $get_case_data_query = substr($get_case_data_query, 0, strlen($get_case_data_query)-4) . ")"; // cut off extra OR
 //print($get_case_data_query);
 $case_data_result = $mysqli->query($get_case_data_query);
 $result_as_array = array();
 $i = 0;
+
 if ($case_data_result) {
     while ($row = $case_data_result->fetch_array(MYSQLI_ASSOC)) {
         $row['vote_id'] = $vote_ids[$i];
