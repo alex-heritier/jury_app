@@ -2,7 +2,6 @@
 
 require 'db.php';
 
-
 $user_id = $_GET['user_id'];
 //$user_id = 80;
 
