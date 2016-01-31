@@ -7,10 +7,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Login Navigation Controller-->
         <scene sceneID="q6X-IP-aZy">
             <objects>
-                <navigationController id="X8C-7K-UnW" sceneMemberID="viewController">
+                <navigationController id="X8C-7K-UnW" customClass="LoginNavigationController" customModule="Jury" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9ek-We-yma">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -142,21 +142,131 @@
         <!--Your Conflicts-->
         <scene sceneID="u71-jD-6J6">
             <objects>
-                <viewController id="uti-he-fFA" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Bg0-8I-Jbh"/>
-                        <viewControllerLayoutGuide type="bottom" id="xhQ-VF-slg"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="y4l-11-VhL">
+                <viewController id="uti-he-fFA" customClass="YourConflictsViewController" customModule="Jury" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ieb-1B-WMd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="conflictCell" rowHeight="90" id="Jjr-8Q-2SQ" customClass="ConflictTableViewCell" customModule="Jury" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="320" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jjr-8Q-2SQ" id="oyD-tZ-y27">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Title" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0em-vy-Spg">
+                                            <rect key="frame" x="8" y="8" width="304" height="25"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tBT-zJ-Kbv">
+                                            <rect key="frame" x="8" y="41" width="304" height="43"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionField" destination="tBT-zJ-Kbv" id="mDw-8l-1CH"/>
+                                    <outlet property="titleField" destination="0em-vy-Spg" id="FeH-EV-ES8"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uti-he-fFA" id="lDQ-2x-3vf"/>
+                            <outlet property="delegate" destination="uti-he-fFA" id="Okh-hr-2a4"/>
+                        </connections>
+                    </tableView>
                     <tabBarItem key="tabBarItem" title="Your Conflicts" id="aUs-8O-DDN"/>
+                    <connections>
+                        <outlet property="tableView" destination="ieb-1B-WMd" id="Mrq-gY-dAV"/>
+                        <segue destination="Ac4-Vx-SH2" kind="show" identifier="conflictDetailSegue" id="pWO-FU-GkJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xun-uN-xcU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1075" y="716"/>
+        </scene>
+        <!--Conflict Detail-->
+        <scene sceneID="gPU-xf-31b">
+            <objects>
+                <viewController title="Conflict Detail" id="Ac4-Vx-SH2" customClass="ConflictDetailViewController" customModule="Jury" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Aes-1Q-xwN"/>
+                        <viewControllerLayoutGuide type="bottom" id="4rH-C6-pke"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gi3-cx-Yc4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Prosecutor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FM4-KC-pKH">
+                                <rect key="frame" x="16" y="83" width="130" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Defendant" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="deV-s5-Koo">
+                                <rect key="frame" x="174" y="83" width="130" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="v." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yl5-QV-TK7">
+                                <rect key="frame" x="154" y="90" width="12" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="12" id="Xhj-w3-ig3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1Dl-lg-Uhy">
+                                <rect key="frame" x="8" y="147" width="304" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="There is no verdict yet." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kbe-Lh-AFE">
+                                <rect key="frame" x="33.5" y="427" width="253" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="253" id="aeh-wl-ikD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Yl5-QV-TK7" firstAttribute="top" secondItem="Aes-1Q-xwN" secondAttribute="bottom" constant="26" id="3wz-Ds-0Xw"/>
+                            <constraint firstItem="1Dl-lg-Uhy" firstAttribute="leading" secondItem="Gi3-cx-Yc4" secondAttribute="leadingMargin" constant="-8" id="4a4-HU-u3a"/>
+                            <constraint firstItem="deV-s5-Koo" firstAttribute="leading" secondItem="Yl5-QV-TK7" secondAttribute="trailing" constant="8" id="6V4-vS-LfK"/>
+                            <constraint firstItem="Kbe-Lh-AFE" firstAttribute="centerX" secondItem="Gi3-cx-Yc4" secondAttribute="centerX" id="EXu-qW-hWX"/>
+                            <constraint firstItem="deV-s5-Koo" firstAttribute="width" secondItem="FM4-KC-pKH" secondAttribute="width" id="FXO-Bl-Ua1"/>
+                            <constraint firstItem="Yl5-QV-TK7" firstAttribute="leading" secondItem="FM4-KC-pKH" secondAttribute="trailing" constant="8" id="L1E-zN-l81"/>
+                            <constraint firstItem="Yl5-QV-TK7" firstAttribute="centerY" secondItem="FM4-KC-pKH" secondAttribute="centerY" id="NPY-mO-ybt"/>
+                            <constraint firstItem="FM4-KC-pKH" firstAttribute="top" secondItem="Aes-1Q-xwN" secondAttribute="bottom" constant="19" id="P12-6L-IJJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Dl-lg-Uhy" secondAttribute="trailing" constant="-8" id="Vdh-ih-wLZ"/>
+                            <constraint firstItem="1Dl-lg-Uhy" firstAttribute="top" secondItem="FM4-KC-pKH" secondAttribute="bottom" constant="33" id="XtU-vb-txI"/>
+                            <constraint firstItem="4rH-C6-pke" firstAttribute="top" secondItem="Kbe-Lh-AFE" secondAttribute="bottom" constant="75" id="Y3r-JH-lIp"/>
+                            <constraint firstItem="1Dl-lg-Uhy" firstAttribute="top" secondItem="deV-s5-Koo" secondAttribute="bottom" constant="33" id="ZWF-eB-zbO"/>
+                            <constraint firstItem="Yl5-QV-TK7" firstAttribute="centerY" secondItem="deV-s5-Koo" secondAttribute="centerY" id="aOM-wW-H2g"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="deV-s5-Koo" secondAttribute="trailing" id="aPA-pr-naI"/>
+                            <constraint firstItem="1Dl-lg-Uhy" firstAttribute="centerX" secondItem="Gi3-cx-Yc4" secondAttribute="centerX" id="qem-4c-LPF"/>
+                            <constraint firstItem="Kbe-Lh-AFE" firstAttribute="top" secondItem="1Dl-lg-Uhy" secondAttribute="bottom" constant="40" id="urd-RG-W5J"/>
+                            <constraint firstItem="FM4-KC-pKH" firstAttribute="leading" secondItem="Gi3-cx-Yc4" secondAttribute="leadingMargin" id="v0o-Mq-cGr"/>
+                            <constraint firstItem="deV-s5-Koo" firstAttribute="top" secondItem="Aes-1Q-xwN" secondAttribute="bottom" constant="19" id="zxs-Vh-d5M"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="defendantField" destination="deV-s5-Koo" id="MpC-GH-oNa"/>
+                        <outlet property="descriptionView" destination="1Dl-lg-Uhy" id="3IS-0M-Zve"/>
+                        <outlet property="prosecutorField" destination="FM4-KC-pKH" id="FhD-Zl-L2M"/>
+                        <outlet property="verdictField" destination="Kbe-Lh-AFE" id="Uzb-wc-msv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dnq-7F-e6Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1474" y="994"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IMl-Eh-baN">
@@ -471,6 +581,16 @@
             <objects>
                 <tabBarController id="oPv-yK-ZsY" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="X2O-9G-2Rm">
+                        <barButtonItem key="leftBarButtonItem" id="4Pu-1T-4ht">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ksf-IV-6jw">
+                                <rect key="frame" x="16" y="7" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log out"/>
+                                <connections>
+                                    <segue destination="Bwu-js-s8C" kind="unwind" unwindAction="logout:" id="4W2-Ka-NzS"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="SH5-ae-Mkx">
                             <connections>
                                 <segue destination="qlr-K1-MHC" kind="presentation" id="D78-gW-lN3"/>
@@ -489,6 +609,7 @@
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OvA-ZJ-Qu3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Bwu-js-s8C" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="643" y="370"/>
         </scene>

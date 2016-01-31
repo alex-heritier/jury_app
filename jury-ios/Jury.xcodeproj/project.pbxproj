@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B15E07D1C5DF71B008EA803 /* YourConflictsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B15E07C1C5DF71B008EA803 /* YourConflictsViewController.swift */; };
+		0B15E07F1C5DF991008EA803 /* ConflictCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B15E07E1C5DF991008EA803 /* ConflictCallback.swift */; };
+		0B15E0811C5E0329008EA803 /* ConflictTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B15E0801C5E0329008EA803 /* ConflictTableViewCell.swift */; };
+		0B15E0851C5E0888008EA803 /* ConflictDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B15E0841C5E0888008EA803 /* ConflictDetailViewController.swift */; };
+		0B15E0871C5E1196008EA803 /* ConflictDetailCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B15E0861C5E1196008EA803 /* ConflictDetailCallback.swift */; };
 		0B34B7271C5D525700C5D0B9 /* YourJuriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B34B7261C5D525700C5D0B9 /* YourJuriesViewController.swift */; };
 		0B34B7291C5D62F700C5D0B9 /* JurorCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B34B7281C5D62F700C5D0B9 /* JurorCallback.swift */; };
 		0B34B72B1C5D7A2200C5D0B9 /* CaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B34B72A1C5D7A2200C5D0B9 /* CaseTableViewCell.swift */; };
@@ -15,6 +20,7 @@
 		0B6049481C5C329800CA00F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B6049461C5C329800CA00F6 /* Main.storyboard */; };
 		0B60494A1C5C329800CA00F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B6049491C5C329800CA00F6 /* Assets.xcassets */; };
 		0B60494D1C5C329800CA00F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B60494B1C5C329800CA00F6 /* LaunchScreen.storyboard */; };
+		0BA642F71C5DD0A000B854E5 /* LoginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA642F61C5DD0A000B854E5 /* LoginNavigationController.swift */; };
 		0BB2A5981C5C45A9003579E5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB2A5971C5C45A9003579E5 /* LoginViewController.swift */; };
 		0BB2A59A1C5C4F77003579E5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB2A5991C5C4F77003579E5 /* HomeViewController.swift */; };
 		0BB2A59C1C5C5152003579E5 /* NewConflictViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB2A59B1C5C5152003579E5 /* NewConflictViewController.swift */; };
@@ -24,6 +30,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B15E07C1C5DF71B008EA803 /* YourConflictsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourConflictsViewController.swift; sourceTree = "<group>"; };
+		0B15E07E1C5DF991008EA803 /* ConflictCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConflictCallback.swift; sourceTree = "<group>"; };
+		0B15E0801C5E0329008EA803 /* ConflictTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConflictTableViewCell.swift; sourceTree = "<group>"; };
+		0B15E0841C5E0888008EA803 /* ConflictDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConflictDetailViewController.swift; sourceTree = "<group>"; };
+		0B15E0861C5E1196008EA803 /* ConflictDetailCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConflictDetailCallback.swift; sourceTree = "<group>"; };
 		0B34B7261C5D525700C5D0B9 /* YourJuriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourJuriesViewController.swift; sourceTree = "<group>"; };
 		0B34B7281C5D62F700C5D0B9 /* JurorCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JurorCallback.swift; sourceTree = "<group>"; };
 		0B34B72A1C5D7A2200C5D0B9 /* CaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -34,6 +45,7 @@
 		0B6049491C5C329800CA00F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B60494C1C5C329800CA00F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B60494E1C5C329800CA00F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BA642F61C5DD0A000B854E5 /* LoginNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginNavigationController.swift; sourceTree = "<group>"; };
 		0BB2A5971C5C45A9003579E5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0BB2A5991C5C4F77003579E5 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0BB2A59B1C5C5152003579E5 /* NewConflictViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewConflictViewController.swift; sourceTree = "<group>"; };
@@ -75,12 +87,18 @@
 				0BB2A5A31C5C79DA003579E5 /* AppModel.swift */,
 				0B6049421C5C329800CA00F6 /* AppDelegate.swift */,
 				0B34B7281C5D62F700C5D0B9 /* JurorCallback.swift */,
+				0B15E07E1C5DF991008EA803 /* ConflictCallback.swift */,
+				0B15E0861C5E1196008EA803 /* ConflictDetailCallback.swift */,
 				0BB2A5A11C5C6AB3003579E5 /* NetworkingController.swift */,
 				0BB2A5971C5C45A9003579E5 /* LoginViewController.swift */,
+				0BA642F61C5DD0A000B854E5 /* LoginNavigationController.swift */,
 				0BB2A59B1C5C5152003579E5 /* NewConflictViewController.swift */,
 				0B34B7261C5D525700C5D0B9 /* YourJuriesViewController.swift */,
+				0B15E07C1C5DF71B008EA803 /* YourConflictsViewController.swift */,
 				0B34B72A1C5D7A2200C5D0B9 /* CaseTableViewCell.swift */,
+				0B15E0801C5E0329008EA803 /* ConflictTableViewCell.swift */,
 				0B34B72C1C5DA57400C5D0B9 /* CaseDetailViewController.swift */,
+				0B15E0841C5E0888008EA803 /* ConflictDetailViewController.swift */,
 				0BB2A5991C5C4F77003579E5 /* HomeViewController.swift */,
 				0BB2A59F1C5C534F003579E5 /* HomeTabNavigationController.swift */,
 				0B6049461C5C329800CA00F6 /* Main.storyboard */,
@@ -167,12 +185,18 @@
 				0B34B7271C5D525700C5D0B9 /* YourJuriesViewController.swift in Sources */,
 				0BB2A5981C5C45A9003579E5 /* LoginViewController.swift in Sources */,
 				0B34B72D1C5DA57400C5D0B9 /* CaseDetailViewController.swift in Sources */,
+				0B15E07F1C5DF991008EA803 /* ConflictCallback.swift in Sources */,
+				0B15E0851C5E0888008EA803 /* ConflictDetailViewController.swift in Sources */,
 				0BB2A5A01C5C534F003579E5 /* HomeTabNavigationController.swift in Sources */,
 				0BB2A59C1C5C5152003579E5 /* NewConflictViewController.swift in Sources */,
 				0BB2A5A21C5C6AB3003579E5 /* NetworkingController.swift in Sources */,
+				0BA642F71C5DD0A000B854E5 /* LoginNavigationController.swift in Sources */,
 				0B6049431C5C329800CA00F6 /* AppDelegate.swift in Sources */,
+				0B15E0871C5E1196008EA803 /* ConflictDetailCallback.swift in Sources */,
+				0B15E07D1C5DF71B008EA803 /* YourConflictsViewController.swift in Sources */,
 				0B34B72B1C5D7A2200C5D0B9 /* CaseTableViewCell.swift in Sources */,
 				0BB2A59A1C5C4F77003579E5 /* HomeViewController.swift in Sources */,
+				0B15E0811C5E0329008EA803 /* ConflictTableViewCell.swift in Sources */,
 				0B34B7291C5D62F700C5D0B9 /* JurorCallback.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,9 +310,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Jury/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kpapakipos.Jury;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alex.Jury;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -297,9 +322,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Jury/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kpapakipos.Jury;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alex.Jury;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

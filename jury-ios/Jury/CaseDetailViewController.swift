@@ -54,6 +54,7 @@ class CaseDetailViewController: UIViewController {
         else {
             verdict = 1
         }
+        print("Submitting verdict...");
         myAppDelegate.networkingController.submitVerdict(caseID, voteID: voteID, verdict: verdict, commentary: commentaryView.text)
         
         dispatch_async(dispatch_get_main_queue(),{

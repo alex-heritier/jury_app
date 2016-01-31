@@ -90,6 +90,7 @@ class NetworkingController: NSObject, NSURLConnectionDelegate {
     func askForJurorCases(callback: JurorCallback) {
         let urlArgs = String(myAppDelegate.appModel.userID).stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!
         let urlString = "http://www.aheritier.com/jury/server/get_juror_cases.php?user_id=" + urlArgs
+        print(urlString)
         
         let request = NSMutableURLRequest(URL: NSURL(string: urlString)!)
         request.HTTPMethod = "GET"
@@ -109,6 +110,63 @@ class NetworkingController: NSObject, NSURLConnectionDelegate {
                 self.myAppDelegate.appModel.caseArray = json
                 print(self.myAppDelegate.appModel.caseArray)
                 callback.fillJurorCases()
+            }
+            catch let error as NSError {
+                print("Failed to load: \(error.localizedDescription)")
+            }
+        }
+        task.resume()
+    }
+    func askForConflictCases(callback: ConflictCallback) {
+        let urlArgs = String(myAppDelegate.appModel.userID).stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!
+        let urlString = "http://www.aheritier.com/jury/server/get_user_case_data.php?user_id=" + urlArgs
+        
+        let request = NSMutableURLRequest(URL: NSURL(string: urlString)!)
+        request.HTTPMethod = "GET"
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {data, response, error in
+            guard error == nil && data != nil else {
+                print("error=\(error!)")
+                return
+            }
+            
+            if let httpStatus = response as? NSHTTPURLResponse where httpStatus.statusCode != 200 {
+                print("statusCode should be 200, but is \(httpStatus.statusCode)")
+                print("response = \(response!)")
+            }
+            
+            do {
+                let json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as! NSArray
+                self.myAppDelegate.appModel.caseArray = json
+                print(self.myAppDelegate.appModel.caseArray)
+                callback.fillConflictCases()
+            }
+            catch let error as NSError {
+                print("Failed to load: \(error.localizedDescription)")
+            }
+        }
+        task.resume()
+    }
+    
+    func askForVerdictsForCase(caseID: Int, callback: ConflictDetailCallback) {
+        let urlArgs = String(caseID).stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!
+        let urlString = "http://www.aheritier.com/jury/server/get_case_vote_data.php?case_id=" + urlArgs
+        
+        let request = NSMutableURLRequest(URL: NSURL(string: urlString)!)
+        request.HTTPMethod = "GET"
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {data, response, error in
+            guard error == nil && data != nil else {
+                print("error=\(error!)")
+                return
+            }
+            
+            if let httpStatus = response as? NSHTTPURLResponse where httpStatus.statusCode != 200 {
+                print("statusCode should be 200, but is \(httpStatus.statusCode)")
+                print("response = \(response!)")
+            }
+            
+            do {
+                let json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as! NSArray
+                callback.fillConflictDetails(json)
             }
             catch let error as NSError {
                 print("Failed to load: \(error.localizedDescription)")
