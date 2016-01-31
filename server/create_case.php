@@ -2,7 +2,7 @@
 
 require 'db.php';
 
-function create_juror_id_array($mysqli, $user_id)
+function create_juror_id_array($mysqli, $user_id) 
 {
     $ids = array();
     $random_user_id_query = "SELECT id FROM users WHERE id!='$user_id' ORDER BY RAND() LIMIT 12";
