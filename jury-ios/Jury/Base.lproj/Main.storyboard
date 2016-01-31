@@ -148,25 +148,6 @@
             </objects>
             <point key="canvasLocation" x="244" y="370"/>
         </scene>
-        <!--Your Cases-->
-        <scene sceneID="FKd-Mw-Xtl">
-            <objects>
-                <viewController title="Your Cases" id="6N6-dc-qGm" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="JPV-4m-s0H"/>
-                        <viewControllerLayoutGuide type="bottom" id="hwF-gl-ovy"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="IEP-0l-0ua">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Your Juries" id="KmK-qR-XqJ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ePv-05-hGV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1472" y="370"/>
-        </scene>
         <!--Your Conflicts-->
         <scene sceneID="u71-jD-6J6">
             <objects>
@@ -317,6 +298,183 @@
             </objects>
             <point key="canvasLocation" x="1075" y="57"/>
         </scene>
+        <!--Your Juries-->
+        <scene sceneID="FLv-91-liW">
+            <objects>
+                <tableViewController id="Z4g-0o-ETS" customClass="YourJuriesViewController" customModule="Jury" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="gYR-9T-f7g">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="caseCell" rowHeight="90" id="lPf-pe-Sxk" customClass="CaseTableViewCell" customModule="Jury" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="320" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lPf-pe-Sxk" id="6g5-xr-eVt">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Title" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QTT-cc-lPZ">
+                                            <rect key="frame" x="8" y="8" width="304" height="25"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZbO-Un-yXH">
+                                            <rect key="frame" x="8" y="41" width="304" height="43"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionField" destination="ZbO-Un-yXH" id="LOf-vI-Ip7"/>
+                                    <outlet property="titleField" destination="QTT-cc-lPZ" id="n59-vk-nDs"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Z4g-0o-ETS" id="FKo-6R-p0a"/>
+                            <outlet property="delegate" destination="Z4g-0o-ETS" id="CXx-Ee-tNa"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Your Juries" id="G3A-hK-zTx"/>
+                    <connections>
+                        <outlet property="tableView" destination="gYR-9T-f7g" id="jxr-6g-hc4"/>
+                        <segue destination="KbM-gy-6S1" kind="show" identifier="caseDetailSegue" id="Mwd-zc-Ql8"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dqP-b4-tcg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1440" y="370"/>
+        </scene>
+        <!--Case Detail-->
+        <scene sceneID="Dkg-aw-H4k">
+            <objects>
+                <viewController title="Case Detail" id="KbM-gy-6S1" customClass="CaseDetailViewController" customModule="Jury" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r4i-If-XI6"/>
+                        <viewControllerLayoutGuide type="bottom" id="BQz-Oc-4cC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="quf-Ur-X1t">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Prosecutor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vq2-r5-i5r">
+                                <rect key="frame" x="16" y="83" width="130" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Defendant" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ToJ-mK-rbo">
+                                <rect key="frame" x="174" y="83" width="130" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="v." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Tk-oc-6fJ">
+                                <rect key="frame" x="154" y="90" width="12" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="12" id="IjD-cT-fVc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jUm-WK-Hh0">
+                                <rect key="frame" x="8" y="146" width="304" height="111"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rxq-UC-oWN">
+                                <rect key="frame" x="136" y="453" width="48" height="30"/>
+                                <state key="normal" title="Judge!"/>
+                                <connections>
+                                    <action selector="judgeButton:" destination="KbM-gy-6S1" eventType="touchUpInside" id="B67-ih-bRL"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wwo-hm-Mts">
+                                <rect key="frame" x="8" y="334" width="304" height="111"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your commentary:" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zZX-gC-y6t">
+                                <rect key="frame" x="100" y="309" width="122" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Dcu-di-lht">
+                                <rect key="frame" x="135" y="269" width="51" height="31"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zZX-gC-y6t" firstAttribute="centerX" secondItem="jUm-WK-Hh0" secondAttribute="centerX" id="0ml-81-1LU"/>
+                            <constraint firstItem="8Tk-oc-6fJ" firstAttribute="top" secondItem="Dcu-di-lht" secondAttribute="bottom" constant="15" id="19T-5Q-OeD"/>
+                            <constraint firstItem="wwo-hm-Mts" firstAttribute="width" secondItem="jUm-WK-Hh0" secondAttribute="width" id="1J8-55-XbP"/>
+                            <constraint firstItem="ToJ-mK-rbo" firstAttribute="top" secondItem="r4i-If-XI6" secondAttribute="bottom" constant="19" id="1mB-Q8-pjg"/>
+                            <constraint firstItem="jUm-WK-Hh0" firstAttribute="top" secondItem="ToJ-mK-rbo" secondAttribute="bottom" constant="33" id="37v-Ag-ZdL"/>
+                            <constraint firstItem="Dcu-di-lht" firstAttribute="top" secondItem="jUm-WK-Hh0" secondAttribute="bottom" constant="12" id="3Gl-XE-GYa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ToJ-mK-rbo" secondAttribute="trailing" id="5cc-Gt-abh"/>
+                            <constraint firstItem="wwo-hm-Mts" firstAttribute="trailing" secondItem="jUm-WK-Hh0" secondAttribute="trailing" id="6Lq-fc-Uo0"/>
+                            <constraint firstItem="jUm-WK-Hh0" firstAttribute="centerX" secondItem="Dcu-di-lht" secondAttribute="centerX" id="6aN-zP-6Sx"/>
+                            <constraint firstItem="jUm-WK-Hh0" firstAttribute="leading" secondItem="quf-Ur-X1t" secondAttribute="leadingMargin" constant="-8" id="Aef-M5-meV"/>
+                            <constraint firstItem="jUm-WK-Hh0" firstAttribute="top" secondItem="r4i-If-XI6" secondAttribute="bottom" constant="127" id="BR0-ix-p7X"/>
+                            <constraint firstItem="BQz-Oc-4cC" firstAttribute="top" secondItem="Rxq-UC-oWN" secondAttribute="bottom" constant="36" id="E6m-0Q-xgX"/>
+                            <constraint firstItem="ToJ-mK-rbo" firstAttribute="leading" secondItem="8Tk-oc-6fJ" secondAttribute="trailing" constant="8" id="EBZ-nO-iGZ"/>
+                            <constraint firstItem="8Tk-oc-6fJ" firstAttribute="centerY" secondItem="Vq2-r5-i5r" secondAttribute="centerY" id="EPr-jw-Fpy"/>
+                            <constraint firstItem="Rxq-UC-oWN" firstAttribute="top" secondItem="jUm-WK-Hh0" secondAttribute="bottom" constant="144" id="F2l-nw-V2g"/>
+                            <constraint firstItem="Dcu-di-lht" firstAttribute="centerX" secondItem="8Tk-oc-6fJ" secondAttribute="centerX" id="FiM-On-l2j"/>
+                            <constraint firstItem="wwo-hm-Mts" firstAttribute="top" secondItem="jUm-WK-Hh0" secondAttribute="bottom" constant="46" id="GhS-Lv-Wh1"/>
+                            <constraint firstItem="BQz-Oc-4cC" firstAttribute="top" secondItem="jUm-WK-Hh0" secondAttribute="bottom" constant="92" id="HcG-kl-2gM"/>
+                            <constraint firstItem="wwo-hm-Mts" firstAttribute="height" secondItem="jUm-WK-Hh0" secondAttribute="height" id="JuK-4w-qPg"/>
+                            <constraint firstItem="8Tk-oc-6fJ" firstAttribute="leading" secondItem="Vq2-r5-i5r" secondAttribute="trailing" constant="8" id="Mln-b6-snj"/>
+                            <constraint firstItem="Vq2-r5-i5r" firstAttribute="top" secondItem="r4i-If-XI6" secondAttribute="bottom" constant="19" id="Ncz-1R-CRU"/>
+                            <constraint firstItem="wwo-hm-Mts" firstAttribute="top" secondItem="zZX-gC-y6t" secondAttribute="bottom" constant="8" id="P8r-aw-LN5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jUm-WK-Hh0" secondAttribute="trailing" constant="-8" id="Qa2-pr-IdD"/>
+                            <constraint firstItem="Vq2-r5-i5r" firstAttribute="top" secondItem="r4i-If-XI6" secondAttribute="bottom" constant="33" id="WJj-a1-29X"/>
+                            <constraint firstItem="wwo-hm-Mts" firstAttribute="centerX" secondItem="jUm-WK-Hh0" secondAttribute="centerX" id="YUN-Kf-B7W"/>
+                            <constraint firstItem="jUm-WK-Hh0" firstAttribute="centerX" secondItem="quf-Ur-X1t" secondAttribute="centerX" id="hqv-lo-16k"/>
+                            <constraint firstItem="jUm-WK-Hh0" firstAttribute="centerX" secondItem="Rxq-UC-oWN" secondAttribute="centerX" id="jXj-MK-Hkd"/>
+                            <constraint firstItem="zZX-gC-y6t" firstAttribute="top" secondItem="Dcu-di-lht" secondAttribute="bottom" constant="8.5" id="mGP-3G-314"/>
+                            <constraint firstItem="Vq2-r5-i5r" firstAttribute="leading" secondItem="quf-Ur-X1t" secondAttribute="leadingMargin" id="mOY-vX-zxa"/>
+                            <constraint firstItem="jUm-WK-Hh0" firstAttribute="top" secondItem="Vq2-r5-i5r" secondAttribute="bottom" constant="33" id="oU5-CD-mXt"/>
+                            <constraint firstItem="Dcu-di-lht" firstAttribute="top" secondItem="r4i-If-XI6" secondAttribute="bottom" constant="23" id="pzQ-z9-Rzo"/>
+                            <constraint firstItem="ToJ-mK-rbo" firstAttribute="width" secondItem="Vq2-r5-i5r" secondAttribute="width" id="q6V-kN-loZ"/>
+                            <constraint firstItem="jUm-WK-Hh0" firstAttribute="centerY" secondItem="quf-Ur-X1t" secondAttribute="centerY" id="tDu-EN-laR"/>
+                            <constraint firstItem="wwo-hm-Mts" firstAttribute="leading" secondItem="jUm-WK-Hh0" secondAttribute="leading" id="wpk-dk-gcg"/>
+                            <constraint firstItem="Rxq-UC-oWN" firstAttribute="top" secondItem="wwo-hm-Mts" secondAttribute="bottom" constant="8" id="xU1-mj-fBu"/>
+                            <constraint firstItem="8Tk-oc-6fJ" firstAttribute="centerY" secondItem="ToJ-mK-rbo" secondAttribute="centerY" id="xly-oa-o3j"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="WJj-a1-29X"/>
+                                <exclude reference="BR0-ix-p7X"/>
+                                <exclude reference="tDu-EN-laR"/>
+                                <exclude reference="19T-5Q-OeD"/>
+                                <exclude reference="FiM-On-l2j"/>
+                                <exclude reference="pzQ-z9-Rzo"/>
+                                <exclude reference="1J8-55-XbP"/>
+                                <exclude reference="GhS-Lv-Wh1"/>
+                                <exclude reference="F2l-nw-V2g"/>
+                                <exclude reference="HcG-kl-2gM"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="commentaryView" destination="wwo-hm-Mts" id="XtJ-qj-OwA"/>
+                        <outlet property="defendantField" destination="ToJ-mK-rbo" id="4vQ-ql-9cs"/>
+                        <outlet property="descriptionView" destination="jUm-WK-Hh0" id="fZT-6C-Jb7"/>
+                        <outlet property="prosecutorField" destination="Vq2-r5-i5r" id="c4i-xa-Haj"/>
+                        <outlet property="verdictSwitch" destination="Dcu-di-lht" id="T7A-2e-Mm3"/>
+                        <segue destination="vmT-Gp-Dab" kind="unwind" identifier="submitVerdictSegue" unwindAction="submittedVerdict:" id="KMM-Mz-H7a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zBN-Yr-E0r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="vmT-Gp-Dab" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1840" y="370"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="4F2-O8-sLf">
             <objects>
@@ -335,7 +493,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="ik3-mT-fNO" kind="relationship" relationship="viewControllers" id="bb0-3J-NLb"/>
-                        <segue destination="6N6-dc-qGm" kind="relationship" relationship="viewControllers" id="XqE-zO-zvf"/>
+                        <segue destination="Z4g-0o-ETS" kind="relationship" relationship="viewControllers" id="ced-M7-BUS"/>
                         <segue destination="uti-he-fFA" kind="relationship" relationship="viewControllers" id="p2K-0a-nnP"/>
                     </connections>
                 </tabBarController>
