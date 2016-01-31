@@ -172,18 +172,19 @@
                                 <rect key="frame" x="0.0" y="92" width="320" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jjr-8Q-2SQ" id="oyD-tZ-y27">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="white.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="YWX-Qo-GeC">
+                                            <rect key="frame" x="0.0" y="-28" width="320" height="125"/>
+                                        </imageView>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Title" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0em-vy-Spg">
                                             <rect key="frame" x="8" y="8" width="304" height="25"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tBT-zJ-Kbv">
                                             <rect key="frame" x="8" y="41" width="304" height="43"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -222,12 +223,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Prosecutor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FM4-KC-pKH">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="white.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="RHX-Jm-jbl">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Prosecutor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FM4-KC-pKH">
                                 <rect key="frame" x="16" y="83" width="130" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Defendant" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="deV-s5-Koo">
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Defendant" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="deV-s5-Koo">
                                 <rect key="frame" x="174" y="83" width="130" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
@@ -242,12 +246,11 @@
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1Dl-lg-Uhy">
                                 <rect key="frame" x="8" y="147" width="304" height="240"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="There is no verdict yet." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kbe-Lh-AFE">
-                                <rect key="frame" x="33.5" y="427" width="253" height="17"/>
+                                <rect key="frame" x="34" y="427" width="253" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="253" id="aeh-wl-ikD"/>
                                 </constraints>
@@ -317,69 +320,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="white.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hwM-gP-ITP">
-                                <rect key="frame" x="0.0" y="64" width="320" height="509"/>
+                                <rect key="frame" x="0.0" y="30" width="320" height="509"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWa-2c-0x1">
-                                <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Prosecutor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rpN-Dp-kmu">
-                                <rect key="frame" x="16" y="94" width="130" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Defendant" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MKi-eh-EWF">
-                                <rect key="frame" x="174" y="94" width="130" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jk7-ex-NHs">
-                                <rect key="frame" x="16" y="157" width="288" height="380"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="v." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JSP-dq-k18">
-                                <rect key="frame" x="154" y="101" width="12" height="17"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="12" id="Bun-zP-suf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uik-1d-6MS">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Prosecutor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rpN-Dp-kmu">
+                                        <rect key="frame" x="8" y="33" width="138" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Defendant" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MKi-eh-EWF">
+                                        <rect key="frame" x="174" y="33" width="138" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="v." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JSP-dq-k18">
+                                        <rect key="frame" x="154" y="39" width="12" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="12" id="Bun-zP-suf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Describe the conflict:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HV0-VT-Jnw">
+                                        <rect key="frame" x="78" y="71" width="164" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Parties Involved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8b-sQ-HLj">
+                                        <rect key="frame" x="99" y="8" width="121" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jk7-ex-NHs">
+                                        <rect key="frame" x="15" y="100" width="288" height="380"/>
+                                        <color key="backgroundColor" white="1" alpha="0.2476174645390071" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="MKi-eh-EWF" firstAttribute="top" secondItem="8aB-7f-FVl" secondAttribute="bottom" constant="30" id="5fV-ou-Uhr"/>
-                            <constraint firstItem="JSP-dq-k18" firstAttribute="centerY" secondItem="rpN-Dp-kmu" secondAttribute="centerY" id="6UR-g1-u3k"/>
-                            <constraint firstItem="Jk7-ex-NHs" firstAttribute="top" secondItem="rpN-Dp-kmu" secondAttribute="bottom" constant="8" id="99f-kJ-AU7"/>
-                            <constraint firstItem="JSP-dq-k18" firstAttribute="leading" secondItem="rpN-Dp-kmu" secondAttribute="trailing" constant="8" id="9We-3h-Lwt"/>
-                            <constraint firstItem="Jk7-ex-NHs" firstAttribute="top" secondItem="MKi-eh-EWF" secondAttribute="bottom" constant="8" id="AXP-2e-If6"/>
-                            <constraint firstItem="Jk7-ex-NHs" firstAttribute="top" secondItem="MKi-eh-EWF" secondAttribute="bottom" constant="33" id="BLr-cX-cAX"/>
-                            <constraint firstItem="Jk7-ex-NHs" firstAttribute="trailing" secondItem="MKi-eh-EWF" secondAttribute="trailing" id="HXO-gs-4Fy"/>
-                            <constraint firstItem="Jk7-ex-NHs" firstAttribute="leading" secondItem="2iX-DG-2rs" secondAttribute="leadingMargin" id="I3R-e7-o6U"/>
-                            <constraint firstItem="Jk7-ex-NHs" firstAttribute="centerX" secondItem="2iX-DG-2rs" secondAttribute="centerX" id="M6l-TU-7zN"/>
-                            <constraint firstItem="MKi-eh-EWF" firstAttribute="leading" secondItem="JSP-dq-k18" secondAttribute="trailing" constant="8" id="PyI-eI-IOX"/>
-                            <constraint firstItem="MKi-eh-EWF" firstAttribute="width" secondItem="rpN-Dp-kmu" secondAttribute="width" id="TOo-Ci-tyj"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="rpN-Dp-kmu" secondAttribute="leading" id="cRH-7P-sUb"/>
-                            <constraint firstItem="Jk7-ex-NHs" firstAttribute="top" secondItem="rpN-Dp-kmu" secondAttribute="bottom" constant="33" id="dU5-ya-hAu"/>
-                            <constraint firstItem="Jk7-ex-NHs" firstAttribute="leading" secondItem="rpN-Dp-kmu" secondAttribute="leading" id="mb1-qd-E43"/>
-                            <constraint firstItem="rpN-Dp-kmu" firstAttribute="top" secondItem="8aB-7f-FVl" secondAttribute="bottom" constant="30" id="mfX-PD-qjk"/>
-                            <constraint firstItem="JSP-dq-k18" firstAttribute="centerY" secondItem="MKi-eh-EWF" secondAttribute="centerY" id="nJQ-ky-tem"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Jk7-ex-NHs" secondAttribute="trailing" id="sD9-hA-kJF"/>
-                            <constraint firstItem="yMC-bg-Il4" firstAttribute="top" secondItem="Jk7-ex-NHs" secondAttribute="bottom" constant="31" id="tQk-X1-RmK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="MKi-eh-EWF" secondAttribute="trailing" id="v84-hj-jqO"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="99f-kJ-AU7"/>
-                                <exclude reference="AXP-2e-If6"/>
-                                <exclude reference="HXO-gs-4Fy"/>
-                                <exclude reference="mb1-qd-E43"/>
-                            </mask>
-                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="xkj-9Z-74t">
+                    <navigationItem key="navigationItem" title="Conflict Draft" id="xkj-9Z-74t">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Obf-gA-vKq">
                             <connections>
                                 <segue destination="NW2-NR-Qn1" kind="unwind" unwindAction="cancelToHomeTab:" id="d7C-Px-NfD"/>
@@ -457,15 +444,16 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="white.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1hp-Hg-Gi7">
+                                            <rect key="frame" x="0.0" y="-29" width="320" height="128"/>
+                                        </imageView>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Title" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QTT-cc-lPZ">
                                             <rect key="frame" x="8" y="8" width="304" height="25"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZbO-Un-yXH">
                                             <rect key="frame" x="8" y="41" width="304" height="43"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -507,110 +495,85 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="white.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="MAH-ID-hSG">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Prosecutor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vq2-r5-i5r">
-                                <rect key="frame" x="16" y="83" width="130" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Defendant" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ToJ-mK-rbo">
-                                <rect key="frame" x="174" y="83" width="130" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="v." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Tk-oc-6fJ">
-                                <rect key="frame" x="154" y="90" width="12" height="17"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="12" id="IjD-cT-fVc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jUm-WK-Hh0">
-                                <rect key="frame" x="8" y="146" width="304" height="111"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rxq-UC-oWN">
-                                <rect key="frame" x="136" y="453" width="48" height="30"/>
-                                <state key="normal" title="Judge!"/>
-                                <connections>
-                                    <action selector="judgeButton:" destination="KbM-gy-6S1" eventType="touchUpInside" id="B67-ih-bRL"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wwo-hm-Mts">
-                                <rect key="frame" x="8" y="334" width="304" height="111"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your commentary:" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zZX-gC-y6t">
-                                <rect key="frame" x="100" y="309" width="122" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Dcu-di-lht">
-                                <rect key="frame" x="135" y="269" width="51" height="31"/>
-                            </switch>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dFd-nw-rpu">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Prosecutor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vq2-r5-i5r">
+                                        <rect key="frame" x="182" y="8" width="130" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Defendant" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ToJ-mK-rbo">
+                                        <rect key="frame" x="8" y="8" width="126" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="v." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Tk-oc-6fJ">
+                                        <rect key="frame" x="154" y="15" width="12" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="12" id="IjD-cT-fVc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUm-WK-Hh0">
+                                        <rect key="frame" x="8" y="70" width="304" height="111"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rxq-UC-oWN">
+                                        <rect key="frame" x="137" y="401" width="48" height="30"/>
+                                        <state key="normal" title="Judge!"/>
+                                        <connections>
+                                            <action selector="judgeButton:" destination="KbM-gy-6S1" eventType="touchUpInside" id="B67-ih-bRL"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wwo-hm-Mts">
+                                        <rect key="frame" x="8" y="214" width="304" height="111"/>
+                                        <color key="backgroundColor" white="1" alpha="0.24977836879432624" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your commentary:" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zZX-gC-y6t">
+                                        <rect key="frame" x="8" y="189" width="122" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Dcu-di-lht">
+                                        <rect key="frame" x="136" y="362" width="51" height="31"/>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description of conflict:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PA8-TM-dw2">
+                                        <rect key="frame" x="8" y="48" width="174" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Verdict" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WO1-Gl-pq4">
+                                        <rect key="frame" x="113" y="333" width="94" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Prosecutor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w2c-PC-2gi">
+                                        <rect key="frame" x="199" y="363" width="97" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Defendant" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vhz-tl-wms">
+                                        <rect key="frame" x="21" y="362" width="97" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="zZX-gC-y6t" firstAttribute="centerX" secondItem="jUm-WK-Hh0" secondAttribute="centerX" id="0ml-81-1LU"/>
-                            <constraint firstItem="8Tk-oc-6fJ" firstAttribute="top" secondItem="Dcu-di-lht" secondAttribute="bottom" constant="15" id="19T-5Q-OeD"/>
-                            <constraint firstItem="wwo-hm-Mts" firstAttribute="width" secondItem="jUm-WK-Hh0" secondAttribute="width" id="1J8-55-XbP"/>
-                            <constraint firstItem="ToJ-mK-rbo" firstAttribute="top" secondItem="r4i-If-XI6" secondAttribute="bottom" constant="19" id="1mB-Q8-pjg"/>
-                            <constraint firstItem="jUm-WK-Hh0" firstAttribute="top" secondItem="ToJ-mK-rbo" secondAttribute="bottom" constant="33" id="37v-Ag-ZdL"/>
-                            <constraint firstItem="Dcu-di-lht" firstAttribute="top" secondItem="jUm-WK-Hh0" secondAttribute="bottom" constant="12" id="3Gl-XE-GYa"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ToJ-mK-rbo" secondAttribute="trailing" id="5cc-Gt-abh"/>
-                            <constraint firstItem="wwo-hm-Mts" firstAttribute="trailing" secondItem="jUm-WK-Hh0" secondAttribute="trailing" id="6Lq-fc-Uo0"/>
-                            <constraint firstItem="jUm-WK-Hh0" firstAttribute="centerX" secondItem="Dcu-di-lht" secondAttribute="centerX" id="6aN-zP-6Sx"/>
-                            <constraint firstItem="jUm-WK-Hh0" firstAttribute="leading" secondItem="quf-Ur-X1t" secondAttribute="leadingMargin" constant="-8" id="Aef-M5-meV"/>
-                            <constraint firstItem="jUm-WK-Hh0" firstAttribute="top" secondItem="r4i-If-XI6" secondAttribute="bottom" constant="127" id="BR0-ix-p7X"/>
-                            <constraint firstItem="BQz-Oc-4cC" firstAttribute="top" secondItem="Rxq-UC-oWN" secondAttribute="bottom" constant="36" id="E6m-0Q-xgX"/>
-                            <constraint firstItem="ToJ-mK-rbo" firstAttribute="leading" secondItem="8Tk-oc-6fJ" secondAttribute="trailing" constant="8" id="EBZ-nO-iGZ"/>
-                            <constraint firstItem="8Tk-oc-6fJ" firstAttribute="centerY" secondItem="Vq2-r5-i5r" secondAttribute="centerY" id="EPr-jw-Fpy"/>
-                            <constraint firstItem="Rxq-UC-oWN" firstAttribute="top" secondItem="jUm-WK-Hh0" secondAttribute="bottom" constant="144" id="F2l-nw-V2g"/>
-                            <constraint firstItem="Dcu-di-lht" firstAttribute="centerX" secondItem="8Tk-oc-6fJ" secondAttribute="centerX" id="FiM-On-l2j"/>
-                            <constraint firstItem="wwo-hm-Mts" firstAttribute="top" secondItem="jUm-WK-Hh0" secondAttribute="bottom" constant="46" id="GhS-Lv-Wh1"/>
-                            <constraint firstItem="BQz-Oc-4cC" firstAttribute="top" secondItem="jUm-WK-Hh0" secondAttribute="bottom" constant="92" id="HcG-kl-2gM"/>
-                            <constraint firstItem="wwo-hm-Mts" firstAttribute="height" secondItem="jUm-WK-Hh0" secondAttribute="height" id="JuK-4w-qPg"/>
-                            <constraint firstItem="8Tk-oc-6fJ" firstAttribute="leading" secondItem="Vq2-r5-i5r" secondAttribute="trailing" constant="8" id="Mln-b6-snj"/>
-                            <constraint firstItem="Vq2-r5-i5r" firstAttribute="top" secondItem="r4i-If-XI6" secondAttribute="bottom" constant="19" id="Ncz-1R-CRU"/>
-                            <constraint firstItem="wwo-hm-Mts" firstAttribute="top" secondItem="zZX-gC-y6t" secondAttribute="bottom" constant="8" id="P8r-aw-LN5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="jUm-WK-Hh0" secondAttribute="trailing" constant="-8" id="Qa2-pr-IdD"/>
-                            <constraint firstItem="Vq2-r5-i5r" firstAttribute="top" secondItem="r4i-If-XI6" secondAttribute="bottom" constant="33" id="WJj-a1-29X"/>
-                            <constraint firstItem="wwo-hm-Mts" firstAttribute="centerX" secondItem="jUm-WK-Hh0" secondAttribute="centerX" id="YUN-Kf-B7W"/>
-                            <constraint firstItem="jUm-WK-Hh0" firstAttribute="centerX" secondItem="quf-Ur-X1t" secondAttribute="centerX" id="hqv-lo-16k"/>
-                            <constraint firstItem="jUm-WK-Hh0" firstAttribute="centerX" secondItem="Rxq-UC-oWN" secondAttribute="centerX" id="jXj-MK-Hkd"/>
-                            <constraint firstItem="zZX-gC-y6t" firstAttribute="top" secondItem="Dcu-di-lht" secondAttribute="bottom" constant="8.5" id="mGP-3G-314"/>
-                            <constraint firstItem="Vq2-r5-i5r" firstAttribute="leading" secondItem="quf-Ur-X1t" secondAttribute="leadingMargin" id="mOY-vX-zxa"/>
-                            <constraint firstItem="jUm-WK-Hh0" firstAttribute="top" secondItem="Vq2-r5-i5r" secondAttribute="bottom" constant="33" id="oU5-CD-mXt"/>
-                            <constraint firstItem="Dcu-di-lht" firstAttribute="top" secondItem="r4i-If-XI6" secondAttribute="bottom" constant="23" id="pzQ-z9-Rzo"/>
-                            <constraint firstItem="ToJ-mK-rbo" firstAttribute="width" secondItem="Vq2-r5-i5r" secondAttribute="width" id="q6V-kN-loZ"/>
-                            <constraint firstItem="jUm-WK-Hh0" firstAttribute="centerY" secondItem="quf-Ur-X1t" secondAttribute="centerY" id="tDu-EN-laR"/>
-                            <constraint firstItem="wwo-hm-Mts" firstAttribute="leading" secondItem="jUm-WK-Hh0" secondAttribute="leading" id="wpk-dk-gcg"/>
-                            <constraint firstItem="Rxq-UC-oWN" firstAttribute="top" secondItem="wwo-hm-Mts" secondAttribute="bottom" constant="8" id="xU1-mj-fBu"/>
-                            <constraint firstItem="8Tk-oc-6fJ" firstAttribute="centerY" secondItem="ToJ-mK-rbo" secondAttribute="centerY" id="xly-oa-o3j"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="WJj-a1-29X"/>
-                                <exclude reference="BR0-ix-p7X"/>
-                                <exclude reference="tDu-EN-laR"/>
-                                <exclude reference="19T-5Q-OeD"/>
-                                <exclude reference="FiM-On-l2j"/>
-                                <exclude reference="pzQ-z9-Rzo"/>
-                                <exclude reference="1J8-55-XbP"/>
-                                <exclude reference="GhS-Lv-Wh1"/>
-                                <exclude reference="F2l-nw-V2g"/>
-                                <exclude reference="HcG-kl-2gM"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="commentaryView" destination="wwo-hm-Mts" id="XtJ-qj-OwA"/>
-                        <outlet property="defendantField" destination="ToJ-mK-rbo" id="4vQ-ql-9cs"/>
+                        <outlet property="defendantField" destination="Vhz-tl-wms" id="ymZ-U1-6qH"/>
                         <outlet property="descriptionView" destination="jUm-WK-Hh0" id="fZT-6C-Jb7"/>
-                        <outlet property="prosecutorField" destination="Vq2-r5-i5r" id="c4i-xa-Haj"/>
+                        <outlet property="prosecutorField" destination="w2c-PC-2gi" id="iMW-WL-1Vu"/>
                         <outlet property="verdictSwitch" destination="Dcu-di-lht" id="T7A-2e-Mm3"/>
                         <segue destination="vmT-Gp-Dab" kind="unwind" identifier="submitVerdictSegue" unwindAction="submittedVerdict:" id="KMM-Mz-H7a"/>
                     </connections>
@@ -629,7 +592,7 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ksf-IV-6jw">
                                 <rect key="frame" x="16" y="7" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Log out"/>
+                                <state key="normal" title="Logout"/>
                                 <connections>
                                     <segue destination="Bwu-js-s8C" kind="unwind" unwindAction="logout:" id="4W2-Ka-NzS"/>
                                 </connections>
