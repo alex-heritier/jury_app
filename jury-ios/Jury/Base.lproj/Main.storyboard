@@ -61,25 +61,25 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cXx-CS-ko7">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="kygo.png" translatesAutoresizingMaskIntoConstraints="NO" id="L3E-OU-dxm">
-                                        <rect key="frame" x="85" y="0.0" width="150" height="150"/>
-                                    </imageView>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gx2-95-iPA">
-                                        <rect key="frame" x="31" y="150" width="259" height="98"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gx2-95-iPA">
+                                        <rect key="frame" x="29" y="0.0" width="262" height="264"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Juror ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Pl-DV-WKY">
-                                                <rect key="frame" x="37" y="0.0" width="184" height="30"/>
+                                                <rect key="frame" x="37" y="166" width="184" height="30"/>
                                                 <fontDescription key="fontDescription" name="SortsMillGoudy-Regular" family="Sorts Mill Goudy" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rDa-Kt-BOY">
-                                                <rect key="frame" x="37" y="34" width="184" height="30"/>
+                                                <rect key="frame" x="37" y="200" width="184" height="30"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="SortsMillGoudy-Regular" family="Sorts Mill Goudy" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5D-3h-VL2">
-                                                <rect key="frame" x="86" y="72" width="86" height="30"/>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kygo.png" translatesAutoresizingMaskIntoConstraints="NO" id="L3E-OU-dxm">
+                                                <rect key="frame" x="54" y="8" width="150" height="150"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5D-3h-VL2">
+                                                <rect key="frame" x="88" y="238" width="86" height="30"/>
                                                 <fontDescription key="fontDescription" name="SortsMillGoudy-Regular" family="Sorts Mill Goudy" pointSize="15"/>
                                                 <size key="titleShadowOffset" width="2.2250738585072014e-308" height="1"/>
                                                 <state key="normal" title="Enter">
@@ -91,28 +91,21 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="7Pl-DV-WKY" firstAttribute="centerX" secondItem="gx2-95-iPA" secondAttribute="centerX" id="0nu-af-mb1"/>
-                                            <constraint firstItem="K5D-3h-VL2" firstAttribute="top" secondItem="rDa-Kt-BOY" secondAttribute="bottom" constant="8" symbolic="YES" id="79G-m1-LO3"/>
+                                            <constraint firstItem="7Pl-DV-WKY" firstAttribute="centerX" secondItem="gx2-95-iPA" secondAttribute="centerX" constant="-2" id="0nu-af-mb1"/>
                                             <constraint firstItem="7Pl-DV-WKY" firstAttribute="trailing" secondItem="rDa-Kt-BOY" secondAttribute="trailing" id="8Rh-lQ-nGN"/>
-                                            <constraint firstItem="K5D-3h-VL2" firstAttribute="centerX" secondItem="rDa-Kt-BOY" secondAttribute="centerX" id="DZx-VC-fsU"/>
-                                            <constraint firstItem="7Pl-DV-WKY" firstAttribute="top" secondItem="gx2-95-iPA" secondAttribute="top" id="GWM-Ku-mbZ"/>
+                                            <constraint firstItem="7Pl-DV-WKY" firstAttribute="top" secondItem="gx2-95-iPA" secondAttribute="top" constant="166" id="GWM-Ku-mbZ"/>
                                             <constraint firstItem="rDa-Kt-BOY" firstAttribute="top" secondItem="7Pl-DV-WKY" secondAttribute="bottom" constant="4" id="Gbj-V7-Onb"/>
                                             <constraint firstItem="7Pl-DV-WKY" firstAttribute="leading" secondItem="gx2-95-iPA" secondAttribute="leading" constant="37" id="Xee-ku-bcR"/>
-                                            <constraint firstAttribute="bottom" secondItem="K5D-3h-VL2" secondAttribute="bottom" constant="-4" id="dfN-EN-2fv"/>
-                                            <constraint firstItem="K5D-3h-VL2" firstAttribute="leading" secondItem="gx2-95-iPA" secondAttribute="leading" constant="86" id="fxt-8b-hKM"/>
-                                            <constraint firstItem="rDa-Kt-BOY" firstAttribute="centerY" secondItem="gx2-95-iPA" secondAttribute="centerY" id="lpb-NW-ai0"/>
+                                            <constraint firstItem="rDa-Kt-BOY" firstAttribute="centerY" secondItem="gx2-95-iPA" secondAttribute="centerY" constant="83" id="lpb-NW-ai0"/>
                                             <constraint firstItem="7Pl-DV-WKY" firstAttribute="leading" secondItem="rDa-Kt-BOY" secondAttribute="leading" id="wO0-bK-U8b"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="gx2-95-iPA" secondAttribute="trailing" constant="30" id="CAT-L4-NEZ"/>
-                                    <constraint firstItem="L3E-OU-dxm" firstAttribute="top" secondItem="cXx-CS-ko7" secondAttribute="top" constant="45" id="P5Q-gt-B6P"/>
-                                    <constraint firstItem="gx2-95-iPA" firstAttribute="centerY" secondItem="cXx-CS-ko7" secondAttribute="centerY" id="Vwc-28-OWD"/>
-                                    <constraint firstItem="gx2-95-iPA" firstAttribute="top" secondItem="L3E-OU-dxm" secondAttribute="bottom" constant="8" symbolic="YES" id="eFD-Gq-t8x"/>
-                                    <constraint firstAttribute="bottom" secondItem="gx2-95-iPA" secondAttribute="bottom" constant="203" id="gxU-sx-2nD"/>
-                                    <constraint firstItem="gx2-95-iPA" firstAttribute="leading" secondItem="cXx-CS-ko7" secondAttribute="leading" constant="31" id="pgC-sa-LCi"/>
-                                    <constraint firstItem="gx2-95-iPA" firstAttribute="centerX" secondItem="L3E-OU-dxm" secondAttribute="centerX" id="uHb-mS-UlL"/>
+                                    <constraint firstAttribute="trailing" secondItem="gx2-95-iPA" secondAttribute="trailing" constant="29" id="CAT-L4-NEZ"/>
+                                    <constraint firstItem="gx2-95-iPA" firstAttribute="centerY" secondItem="cXx-CS-ko7" secondAttribute="centerY" constant="-120" id="Vwc-28-OWD"/>
+                                    <constraint firstAttribute="bottom" secondItem="gx2-95-iPA" secondAttribute="bottom" constant="240" id="gxU-sx-2nD"/>
+                                    <constraint firstItem="gx2-95-iPA" firstAttribute="leading" secondItem="cXx-CS-ko7" secondAttribute="leading" constant="29" id="pgC-sa-LCi"/>
                                     <constraint firstItem="gx2-95-iPA" firstAttribute="centerX" secondItem="cXx-CS-ko7" secondAttribute="centerX" id="v55-r7-Lqh"/>
                                 </constraints>
                             </scrollView>
@@ -429,7 +422,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fJ-8r-g6g">
-                                        <rect key="frame" x="20" y="217" width="280" height="238"/>
+                                        <rect key="frame" x="20" y="217" width="282" height="370"/>
                                         <string key="text">Welcome to the Jury virtual courtroom. To view the Jury cases you have been assigned, go to the "Summons" tab. If you would like to submit your own conflict to be judged by your peers, use the use the creation button above. To see your submitted conflicts, go to the "Your Conflicts" tab.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
