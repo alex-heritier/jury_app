@@ -28,6 +28,10 @@ class HomeTabNavigationController: UINavigationController {
     @IBAction func saveToHomeTab(segue: UIStoryboardSegue) {
         
     }
+    
+    @IBAction func submittedVerdict(segue: UIStoryboardSegue) {
+        
+    }
 
     /*
     // MARK: - Navigation
