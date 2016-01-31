@@ -22,6 +22,7 @@ class ConflictDetailViewController: UIViewController {
     @IBOutlet weak var defendantField: UITextField!
     @IBOutlet weak var descriptionView: UITextView!
     @IBOutlet weak var verdictField: UITextField!
+    @IBOutlet weak var commentaryView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,22 +42,26 @@ class ConflictDetailViewController: UIViewController {
         var prosecutorVotes = 0
         var defendantVotes = 0
         var undecidedVotes = 0
+        var commentaryStr = String()
         
-        for detail in details{
+        for detail in details {
+            
             if Int(detail["verdict"] as! String) < 0 {
                 undecidedVotes++
             }
             if Int(detail["verdict"] as! String) == 0 {
                 defendantVotes++
+                commentaryStr.appendContentsOf("FOR DEFENDANT: \(detail["comment"] as! String).\n")
             }
             if Int(detail["verdict"] as! String) > 0 {
                 prosecutorVotes++
+                commentaryStr.appendContentsOf("FOR PROSECUTOR: \(detail["comment"] as! String).\n")
             }
         }
         
         dispatch_async(dispatch_get_main_queue(),{
             if undecidedVotes > 6 {
-                self.verdictField.text = "There is no verdict yet."
+                self.verdictField.text = "NO VERDICT YET."
             }
             if defendantVotes > 6 {
                 self.verdictField.text = "NOT GUILTY."
@@ -64,6 +69,8 @@ class ConflictDetailViewController: UIViewController {
             if prosecutorVotes > 6 {
                 self.verdictField.text = "GUILTY."
             }
+            
+            self.commentaryView.text = commentaryStr
         })
     }
 
