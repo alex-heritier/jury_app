@@ -56,7 +56,7 @@
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Juror ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Pl-DV-WKY">
                                                 <rect key="frame" x="37" y="0.0" width="176" height="30"/>
                                                 <fontDescription key="fontDescription" name="SortsMillGoudy-Regular" family="Sorts Mill Goudy" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rDa-Kt-BOY">
                                                 <rect key="frame" x="37" y="34" width="176" height="30"/>
@@ -294,6 +294,7 @@
                         <outlet property="prosecutorField" destination="FM4-KC-pKH" id="FhD-Zl-L2M"/>
                         <outlet property="verdictField" destination="Kbe-Lh-AFE" id="Uzb-wc-msv"/>
                     </connections>
+                    <tabBarItem key="tabBarItem" title="Your Conflicts" image="logo35.png" id="aUs-8O-DDN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dnq-7F-e6Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -429,19 +430,19 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="white.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="MLw-Cd-jUG">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fJ-8r-g6g">
-                                <rect key="frame" x="0.0" y="281" width="320" height="238"/>
-                                <string key="text">Welcome to the Jury virtual courtroom. To view the Jury cases you have been assignmented, go to the "Your Juries" tab. If you would like to submit your own conflict to be judged by your peers, go to the "Your conflicts" tab.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xct-0G-PIA">
                                 <rect key="frame" x="56" y="64" width="209" height="209"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fJ-8r-g6g">
+                                <rect key="frame" x="20" y="281" width="280" height="238"/>
+                                <string key="text">Welcome to the Jury virtual courtroom. To view the Jury cases you have been assigned, go to the "Your Juries" tab. If you would like to submit your own conflict to be judged by your peers, go to the use the creation button above. To see your submitted conflicts, go to the "Your Conflicts" tab.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="nfN-J7-HG0"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="romanhouse35.png" id="nfN-J7-HG0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fNo-CT-i3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -488,7 +489,7 @@
                             <outlet property="delegate" destination="Z4g-0o-ETS" id="CXx-Ee-tNa"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Your Juries" id="G3A-hK-zTx"/>
+                    <tabBarItem key="tabBarItem" title="Your Juries" image="scales35.png" id="G3A-hK-zTx"/>
                     <connections>
                         <outlet property="tableView" destination="gYR-9T-f7g" id="jxr-6g-hc4"/>
                         <segue destination="KbM-gy-6S1" kind="show" identifier="caseDetailSegue" id="Mwd-zc-Ql8"/>
@@ -665,6 +666,9 @@
     <resources>
         <image name="kygo.png" width="150" height="150"/>
         <image name="logo.png" width="150" height="150"/>
+        <image name="logo35.png" width="35" height="35"/>
+        <image name="romanhouse35.png" width="35" height="35"/>
+        <image name="scales35.png" width="45" height="34"/>
         <image name="white.jpg" width="600" height="600"/>
     </resources>
 </document>

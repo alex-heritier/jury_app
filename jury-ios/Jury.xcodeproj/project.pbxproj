@@ -26,6 +26,9 @@
 		02AF44FA1C5DDC6D00A8D8E8 /* white.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02AF44F91C5DDC6D00A8D8E8 /* white.jpg */; };
 		02AF45021C5DE5F000A8D8E8 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 02AF45011C5DE5F000A8D8E8 /* logo.png */; };
 		02AF45091C5DEC6800A8D8E8 /* kygo.png in Resources */ = {isa = PBXBuildFile; fileRef = 02AF45081C5DEC6800A8D8E8 /* kygo.png */; };
+		02AF45131C5DFE9500A8D8E8 /* logo35.png in Resources */ = {isa = PBXBuildFile; fileRef = 02AF45121C5DFE9500A8D8E8 /* logo35.png */; };
+		02AF45171C5E01B600A8D8E8 /* scales35.png in Resources */ = {isa = PBXBuildFile; fileRef = 02AF45161C5E01B600A8D8E8 /* scales35.png */; };
+		02AF45191C5E060800A8D8E8 /* romanhouse35.png in Resources */ = {isa = PBXBuildFile; fileRef = 02AF45181C5E060800A8D8E8 /* romanhouse35.png */; };
 		0B34B7271C5D525700C5D0B9 /* YourJuriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B34B7261C5D525700C5D0B9 /* YourJuriesViewController.swift */; };
 		0B34B7291C5D62F700C5D0B9 /* JurorCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B34B7281C5D62F700C5D0B9 /* JurorCallback.swift */; };
 		0B34B72B1C5D7A2200C5D0B9 /* CaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B34B72A1C5D7A2200C5D0B9 /* CaseTableViewCell.swift */; };
@@ -65,6 +68,9 @@
 		02AF45041C5DE80400A8D8E8 /* SortsMillGoudy-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SortsMillGoudy-Italic.ttf"; sourceTree = "<group>"; };
 		02AF45051C5DE80500A8D8E8 /* SortsMillGoudy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SortsMillGoudy-Regular.ttf"; sourceTree = "<group>"; };
 		02AF45081C5DEC6800A8D8E8 /* kygo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kygo.png; sourceTree = "<group>"; };
+		02AF45121C5DFE9500A8D8E8 /* logo35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo35.png; sourceTree = "<group>"; };
+		02AF45161C5E01B600A8D8E8 /* scales35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scales35.png; sourceTree = "<group>"; };
+		02AF45181C5E060800A8D8E8 /* romanhouse35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = romanhouse35.png; sourceTree = "<group>"; };
 		0B34B7261C5D525700C5D0B9 /* YourJuriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourJuriesViewController.swift; sourceTree = "<group>"; };
 		0B34B7281C5D62F700C5D0B9 /* JurorCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JurorCallback.swift; sourceTree = "<group>"; };
 		0B34B72A1C5D7A2200C5D0B9 /* CaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -116,6 +122,9 @@
 		02AF44F81C5DDC6400A8D8E8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				02AF45181C5E060800A8D8E8 /* romanhouse35.png */,
+				02AF45161C5E01B600A8D8E8 /* scales35.png */,
+				02AF45121C5DFE9500A8D8E8 /* logo35.png */,
 				02AF44F91C5DDC6D00A8D8E8 /* white.jpg */,
 				02AF45081C5DEC6800A8D8E8 /* kygo.png */,
 				02AF45011C5DE5F000A8D8E8 /* logo.png */,
@@ -252,7 +261,10 @@
 				02AF44EE1C5DD9CB00A8D8E8 /* Icon-60@3x.png in Resources */,
 				02AF44ED1C5DD9CB00A8D8E8 /* Icon-40@3x.png in Resources */,
 				02AF45021C5DE5F000A8D8E8 /* logo.png in Resources */,
+				02AF45131C5DFE9500A8D8E8 /* logo35.png in Resources */,
 				02AF44F11C5DD9CB00A8D8E8 /* Icon-Small.png in Resources */,
+				02AF45191C5E060800A8D8E8 /* romanhouse35.png in Resources */,
+				02AF45171C5E01B600A8D8E8 /* scales35.png in Resources */,
 				02AF44EC1C5DD9CB00A8D8E8 /* Icon-40@2x.png in Resources */,
 				02AF44F21C5DD9CB00A8D8E8 /* Icon-Small@2x.png in Resources */,
 			);
