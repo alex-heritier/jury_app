@@ -61,5 +61,3 @@ Carthage/Build
 
 fastlane/report.xml
 fastlane/screenshots
-
-jury-ios/Jury.xcodeproj/project.pbxproj

@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
         let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
         dispatch_async(dispatch_get_global_queue(priority, 0)) {
             while !self.myAppDelegate.appModel.canLogin {
-                NSThread.sleepForTimeInterval(1/100)
+                NSThread.sleepForTimeInterval(0.1)
             }
             dispatch_async(dispatch_get_main_queue(),{
                 self.performSegueWithIdentifier("loginSuccessSegue", sender: self)
