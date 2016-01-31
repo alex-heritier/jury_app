@@ -145,10 +145,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Sign In or Up" id="LCb-30-gDN"/>
-<<<<<<< HEAD
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-=======
->>>>>>> e5f3f5e96c48c6947dc9ba004fdcfc7cf379d5ee
+
                     <connections>
                         <outlet property="passwordField" destination="rDa-Kt-BOY" id="GlG-td-1Ou"/>
                         <outlet property="usernameField" destination="7Pl-DV-WKY" id="mGC-jc-hnM"/>
@@ -266,13 +263,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-<<<<<<< HEAD
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="There is no verdict yet." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kbe-Lh-AFE">
-                                <rect key="frame" x="62" y="427" width="253" height="17"/>
-=======
+
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="There is no verdict yet." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kbe-Lh-AFE">
                                 <rect key="frame" x="34" y="427" width="253" height="17"/>
->>>>>>> origin/master
                                 <constraints>
                                     <constraint firstAttribute="width" constant="253" id="aeh-wl-ikD"/>
                                 </constraints>
@@ -449,7 +442,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-<<<<<<< HEAD
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAp-92-Edu">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
@@ -458,35 +450,7 @@
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xct-0G-PIA">
                                         <rect key="frame" x="102" y="72" width="209" height="209"/>
-=======
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="str-Wq-Pdt">
-                                <rect key="frame" x="-4" y="64" width="328" height="455"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAp-92-Edu">
-                                        <rect key="frame" x="0.0" y="0.0" width="328" height="455"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="MLw-Cd-jUG">
-                                                <rect key="frame" x="0.0" y="0.0" width="328" height="455"/>
-                                            </imageView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fJ-8r-g6g">
-                                                <rect key="frame" x="-20" y="207" width="368" height="210"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="210" id="dEo-1a-2br"/>
-                                                </constraints>
-                                                <string key="text">Welcome to the Jury virtual courtroom. To view the Jury cases you have been assigned, go to the "Summons" tab. If you would like to submit your own conflict to be judged by your peers, use the use the creation button above. To see your submitted conflicts, go to the "Your Conflicts" tab.</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xct-0G-PIA">
-                                                <rect key="frame" x="60" y="8" width="209" height="209"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="209" id="dHs-Ms-YFN"/>
-                                                    <constraint firstAttribute="width" constant="209" id="dUK-3x-Guk"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
->>>>>>> e5f3f5e96c48c6947dc9ba004fdcfc7cf379d5ee
+
                                         <constraints>
                                             <constraint firstAttribute="height" constant="209" id="dHs-Ms-YFN"/>
                                             <constraint firstAttribute="width" constant="209" id="dUK-3x-Guk"/>
