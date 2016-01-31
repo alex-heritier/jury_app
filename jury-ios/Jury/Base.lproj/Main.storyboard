@@ -211,7 +211,7 @@
                             <outlet property="delegate" destination="uti-he-fFA" id="Okh-hr-2a4"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Your Conflicts" id="aUs-8O-DDN"/>
+                    <tabBarItem key="tabBarItem" title="Your Conflicts" image="logo35.png" id="aUs-8O-DDN"/>
                     <connections>
                         <outlet property="tableView" destination="ieb-1B-WMd" id="Mrq-gY-dAV"/>
                         <segue destination="Ac4-Vx-SH2" kind="show" identifier="conflictDetailSegue" id="pWO-FU-GkJ"/>
@@ -294,7 +294,6 @@
                         <outlet property="prosecutorField" destination="FM4-KC-pKH" id="FhD-Zl-L2M"/>
                         <outlet property="verdictField" destination="Kbe-Lh-AFE" id="Uzb-wc-msv"/>
                     </connections>
-                    <tabBarItem key="tabBarItem" title="Your Conflicts" image="logo35.png" id="aUs-8O-DDN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dnq-7F-e6Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
