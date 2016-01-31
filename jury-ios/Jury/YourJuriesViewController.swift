@@ -20,13 +20,16 @@ class YourJuriesViewController: UIViewController, UITableViewDelegate, UITableVi
         
         self.tableView.rowHeight = 90.0
         
-        jurorCallback = JurorCallback(owner: self)
-        
-        myAppDelegate.networkingController.askForJurorCases(jurorCallback)
-        
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        jurorCallback = JurorCallback(owner: self)
+        myAppDelegate.networkingController.askForJurorCases(jurorCallback)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
