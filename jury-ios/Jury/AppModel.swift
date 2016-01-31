@@ -13,4 +13,6 @@ class AppModel: NSObject {
     var userID: Int!
     var username: String!
     var canLogin = false
+    var caseArray = NSArray()
+    var canDisplayJuries = false
 }
