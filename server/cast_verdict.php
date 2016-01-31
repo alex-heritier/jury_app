@@ -23,7 +23,7 @@ $mysqli->query($vote_update_query);
 $get_vote_count_query = "SELECT vote_count FROM cases WHERE id='$case_id'";
 $vote_count = $mysqli->query($get_vote_count_query)->fetch_array(MYSQLI_NUM)[0];
 $vote_count++;
-print($vote_count);
+//print($vote_count);
 if ($vote_count >= 12) { // if vote_count is at 12 (the max)
     // set case to inactive
     $deactivate_case_query = "UPDATE cases SET active=0, vote_count='$vote_count' WHERE id='$case_id'";
@@ -31,7 +31,7 @@ if ($vote_count >= 12) { // if vote_count is at 12 (the max)
     $mysqli->query($deactivate_case_query);
     // set associated votes to inactive
     $deactivate_votes_query = "UPDATE votes SET active=0 WHERE case_id='$case_id'";
-    print($deactivate_votes_query);
+    //print($deactivate_votes_query);
     $mysqli->query($deactivate_votes_query);
 } else {
     // increment vote_count
