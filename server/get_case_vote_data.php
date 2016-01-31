@@ -21,4 +21,5 @@ while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
     }
     array_push($case_vote_data, $row);
 }
-print_r(json_encode($case_vote_data));
+$json = json_encode($case_vote_data);
+print($json);
