@@ -108,14 +108,14 @@
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kygo.png" translatesAutoresizingMaskIntoConstraints="NO" id="L3E-OU-dxm">
                                 <rect key="frame" x="81" y="64" width="150" height="150"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="New and Returning Users:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fY5-pc-Qym">
-                                <rect key="frame" x="73" y="217" width="174" height="33"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" text="New and Returning Users:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fY5-pc-Qym">
+                                <rect key="frame" x="73" y="216" width="174" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="rDw-LF-yJC"/>
                                 </constraints>
                                 <color key="textColor" red="0.50576755104680837" green="0.50908049738219896" blue="0.50649470143024777" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
