@@ -145,7 +145,10 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Sign In or Up" id="LCb-30-gDN"/>
+<<<<<<< HEAD
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+=======
+>>>>>>> e5f3f5e96c48c6947dc9ba004fdcfc7cf379d5ee
                     <connections>
                         <outlet property="passwordField" destination="rDa-Kt-BOY" id="GlG-td-1Ou"/>
                         <outlet property="usernameField" destination="7Pl-DV-WKY" id="mGC-jc-hnM"/>
@@ -443,9 +446,10 @@
                         <viewControllerLayoutGuide type="bottom" id="lFJ-5d-Isj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vxk-Eq-yOV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+<<<<<<< HEAD
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAp-92-Edu">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
@@ -454,6 +458,35 @@
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xct-0G-PIA">
                                         <rect key="frame" x="102" y="72" width="209" height="209"/>
+=======
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="str-Wq-Pdt">
+                                <rect key="frame" x="-4" y="64" width="328" height="455"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAp-92-Edu">
+                                        <rect key="frame" x="0.0" y="0.0" width="328" height="455"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="MLw-Cd-jUG">
+                                                <rect key="frame" x="0.0" y="0.0" width="328" height="455"/>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fJ-8r-g6g">
+                                                <rect key="frame" x="-20" y="207" width="368" height="210"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="210" id="dEo-1a-2br"/>
+                                                </constraints>
+                                                <string key="text">Welcome to the Jury virtual courtroom. To view the Jury cases you have been assigned, go to the "Summons" tab. If you would like to submit your own conflict to be judged by your peers, use the use the creation button above. To see your submitted conflicts, go to the "Your Conflicts" tab.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xct-0G-PIA">
+                                                <rect key="frame" x="60" y="8" width="209" height="209"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="209" id="dHs-Ms-YFN"/>
+                                                    <constraint firstAttribute="width" constant="209" id="dUK-3x-Guk"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+>>>>>>> e5f3f5e96c48c6947dc9ba004fdcfc7cf379d5ee
                                         <constraints>
                                             <constraint firstAttribute="height" constant="209" id="dHs-Ms-YFN"/>
                                             <constraint firstAttribute="width" constant="209" id="dUK-3x-Guk"/>
@@ -501,7 +534,6 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="romanhouse35.png" id="nfN-J7-HG0"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fNo-CT-i3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -636,7 +668,7 @@
         <!--Jury-->
         <scene sceneID="4F2-O8-sLf">
             <objects>
-                <tabBarController id="oPv-yK-ZsY" sceneMemberID="viewController">
+                <tabBarController id="oPv-yK-ZsY" customClass="HomeTabBarController" customModule="Jury" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Jury" id="X2O-9G-2Rm">
                         <barButtonItem key="leftBarButtonItem" id="4Pu-1T-4ht">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ksf-IV-6jw">
@@ -644,7 +676,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
-                                    <segue destination="Bwu-js-s8C" kind="unwind" unwindAction="logout:" id="4W2-Ka-NzS"/>
+                                    <segue destination="Bwu-js-s8C" kind="unwind" unwindAction="logout:" id="MpJ-Wo-Zxr"/>
                                 </connections>
                             </button>
                         </barButtonItem>

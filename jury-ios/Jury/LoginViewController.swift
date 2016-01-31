@@ -38,6 +38,12 @@ class LoginViewController: UIViewController {
         }
     }
     
+    @IBAction func logout(segue: UIStoryboardSegue) {
+        usernameField.text = ""
+        passwordField.text = ""
+        self.myAppDelegate.appModel.canLogin = false
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
     }
