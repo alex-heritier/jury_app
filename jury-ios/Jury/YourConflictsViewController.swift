@@ -20,13 +20,16 @@ class YourConflictsViewController: UIViewController, UITableViewDelegate, UITabl
         
         self.tableView.rowHeight = 90.0
         
-        conflictCallback = ConflictCallback(owner: self)
-        
-        myAppDelegate.networkingController.askForConflictCases(conflictCallback)
-        
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        conflictCallback = ConflictCallback(owner: self)
+        myAppDelegate.networkingController.askForConflictCases(conflictCallback)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
